@@ -1,0 +1,13 @@
+<h1>List of Lists</h1>
+
+<p>Please choose a list or create a new one</p>
+<%= link_to "Create a list", new_list_path %>
+
+<div id="lists">
+  <% @lists.each do |list| %>
+    <h2><%=  list.name %></h2>
+    <p>
+      <%= link_to "Show this list", list_path(list.id) %>
+    </p>
+  <% end %>
+</div>

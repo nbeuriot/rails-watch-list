@@ -1,0 +1,16 @@
+<h1>New List</h1>
+
+<div>
+  <%= link_to "Back to lists", lists_path %>
+</div>
+
+<%= simple_form_for(@list) do |f| %>
+
+<div class="form-inputs">
+    <%= f.input :name %>
+</div>
+
+ <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
